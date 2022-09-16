@@ -1,0 +1,54 @@
+body{
+    background-color: aqua;
+}
+
+#wrapper{
+    border: solid rgb(224, 9, 196) 1px;
+    height: 600px;
+    position: relative;
+    margin: 50px;
+    
+}
+nav{
+    border: solid blue 1px;
+    background-color: aliceblue;
+}
+ nav ul{
+    list-style-type: none;
+    text-transform: uppercase;
+   
+}
+
+ul li{
+    display: inline-block;
+    margin-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: solid black 2px;
+    border-radius: 5px;
+    background-color: bisque;
+}
+
+ul li:hover{
+    background-color: rgb(235, 136, 15);
+}
+
+#content{
+    border : solid rgb(255, 0, 0) 1px;
+    position : relative;
+    top: 10px;
+}
+
+form{
+    border : solid rgb(255, 0, 0) 1px;
+    margin-top : 5%;
+    background-color: bisque;
+}
+
+form select,input{
+    width : 250px;
+    height : 50px;
+    margin : 50px;
+}

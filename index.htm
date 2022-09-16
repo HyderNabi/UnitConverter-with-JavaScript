@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet"/>
+    <script language = "javascript" src = "javascript/process.js"></script>
+   
+</head>
+<body>
+    <div id = "wrapper">
+        <nav id = "navigaton">
+            <ul name="nav">
+                <li class = "click" onclick="DrawUI('AREA')">Area</li>
+                <li class = "click" onclick="DrawUI('LENGTH')">Length</li>
+                <li class = "click" onclick="DrawUI('TEMPERATURE')">Temperature</li>
+                <li class = "click" onclick="DrawUI('VOLUME')">Volume</li>
+                <li class = "click" onclick="DrawUI('MASS')">Mass</li>
+                <li class = "click" onclick="DrawUI('DATA')">Data</li>
+                <li class = "click" onclick="DrawUI('SPEED')">Speed</li>
+                <li class = "click" onclick="DrawUI('TIME')">Time</li>
+            </ul>
+        </nav>
+        <div id = "content">
+            <center>
+                <form>
+
+                    <select id = "From_Unit" onchange="TranslateUnit('FORWARD')"></select>
+                    <input id = "From_Input" type = "number" value="0" oninput="TranslateUnit('FORWARD')">
+                    <br/>
+
+                    <select id = "To_Unit" onchange="TranslateUnit('FORWARD')"> </select>
+                    <input id = "To_Input" type = "number" value="0" oninput="TranslateUnit('BACKWARD')">
+                    <br/>
+
+                </form>
+            </center>
+        </div>
+
+    </div>  
+    <footer>
+        <script> 
+            DrawUI('AREA');
+        </script>
+    </footer>  
+</body>
+</html>
