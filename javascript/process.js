@@ -2,13 +2,21 @@
 var Units;      //UNITS TO BE INVOLVED IN THE CONVERSION
 var data;       //CONVERSION DATA
 
-function DrawUI(navigation)
+function setBackground(self)
 {
     nav = document.getElementsByClassName("click");
     for(i=0;i<nav.length;i++)
     {
-        nav[i].style.backgroundColor = "red";
+        if(i == self)
+            nav[i].style.backgroundColor = "rgba(255, 0, 0, 0.747)";
+        else
+            nav[i].style.backgroundColor = "rgba(255, 228, 196, 0.432)";
     }
+    
+}
+function DrawUI(navigation)
+{
+  
     switch(navigation)  //SELECTION OF THE "UNITS" AND CORROSPONDING "CONVERSION DATA" ...
     {
         case 'AREA':
@@ -22,6 +30,7 @@ function DrawUI(navigation)
                 new Array(1.59422508e-7, 0.0000064516, 6.45160000e-8, 6.4516, 0.0069444444, 1, 0.00064516),
                 new Array(0.0002471054, 0.01, 0.0001, 10000, 10.7639104167,1550.0031000062, 1)
             );
+            setBackground(0);
             break;
         case 'LENGTH':
             Units = new Array("Millimeteres (mm)", "Centimetres (cm)", "Metres (m)", "Kilometres (km)", "Inches (in)", "Feet (ft)", "Yards (yd)", "Miles (mi)", "Nautical miles (NM)", "Mils (mil)");
@@ -37,6 +46,7 @@ function DrawUI(navigation)
                 new Array(1852000, 185200, 1852, 1.852, 72913.385826772, 6076.1154855643, 2025.3718285214, 1.150779448, 1, 72913385.826772),
                 new Array(0.0254, 0.00254, 0.0000254, 2.54000000e-8, 0.001, 0.0000833333, 0.0000277778, 1.57828283e-8, 1.37149028e-8, 1)
             );
+            setBackground(1);
             break;
         case 'TEMPERATURE':
             Units = new Array("Celsius (&#8451;)", "Fahrenheit (&#8457;)", "Kelvin (K)");
@@ -45,6 +55,7 @@ function DrawUI(navigation)
                 new Array(-17.2222222222, 1, 255.9277777778),
                 new Array(-272.15, -457.87, 1)
             );
+            setBackground(2);
             break;
         case 'VOLUME':
             Units = new Array("UK gallons (gal)", "US gallons (gal)", "Litres (l)", "Millilitres (ml)", "Cubic centimetres (cc | cm&sup3)", "Cubic metres (m&sup3)", "Cubic inches (in&sup3)", "Cubic feet (ft&sup3)");
@@ -58,6 +69,7 @@ function DrawUI(navigation)
                 new Array(0.0036046501, 0.0043290043, 0.016387064, 16.387064, 16.387064, 0.0000163871, 1, 0.0005787037),
                 new Array(6.228835459, 7.4805194805, 28.316846592, 28316.846592, 28316.846592, 0.0283168466, 1728, 1)
             );
+            setBackground(3);
             break;
         case 'MASS':
             Units = new Array("Tons (t)", "UK tons (t)", "US tons (t)", "Pounds (lb)", "Ounces (oz)", "Kilogrammes (kg)", "Grams (g)");
@@ -70,6 +82,7 @@ function DrawUI(navigation)
                 new Array(0.001, 0.0009842065, 0.0011023113, 2.2046226218, 35.2739619496, 1, 1000),
                 new Array(0.000001, 9.84206528e-7, 0.0000011023, 0.0022046226, 0.0352739619, 0.001, 1)
             );
+            setBackground(4);
             break;
         case 'DATA':
             Units = new Array("Bits (bit)", "Bytes (B)", "Kilobytes (KB)", "Megabytes (MB)", "Gigabytes (GB)", "Terabytes (TB)");
@@ -81,6 +94,7 @@ function DrawUI(navigation)
                 new Array(8589934592, 1073741824, 1048576, 1024, 1, 0.0009765625),
                 new Array(8796093022208, 1099511627776, 1073741824, 1048576, 1024, 1)
             );
+            setBackground(5);
             break;
         case 'SPEED':
             Units = new Array("Metres per second (m/s)", "Metres per hour (m/h)", "Kilometres per second (km/s)", "Kilometres per hour (km/h)", "Inches per second (in/s)", "Inches per hour (in/h)", "Feet per second (ft/s)", "Feet per hour (ft/h)", "Miles per second (mi/s)", "Miles per hour (mi/h)", "Knots (kn)");
@@ -97,6 +111,7 @@ function DrawUI(navigation)
                 new Array(0.44704, 1609.344, 0.00044704, 1.609344, 17.6, 63360, 1.4666666667, 5280, 0.0002777778, 1, 0.8689762419),
                 new Array(0.5144444444, 1852, 0.0005144444, 1.852, 20.2537182852, 72913.385826772, 1.6878098571, 6076.1154855643, 0.000319661, 1.150779448, 1)
             );
+            setBackground(6);
             break;
         case 'TIME':
             Units = new Array("Milliseconds (ms)", "Seconds (s)", "Minutes (min)", "Hours (h)", "Days (d)", "Weeks (wk)");
@@ -108,6 +123,7 @@ function DrawUI(navigation)
                 new Array(86400000, 86400, 1440, 24, 1, 0.1428571429),
                 new Array(604800000, 604800, 10080, 168, 7, 1)
             );
+            setBackground(8);
             break;
     }
     

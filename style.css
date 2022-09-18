@@ -1,54 +1,68 @@
 body{
-    background-color: aqua;
+    background-color: rgb(23, 153, 153);
+    background-image: url(bg.jpg);
 }
 
 #wrapper{
-    border: solid rgb(224, 9, 196) 1px;
+   
     height: 600px;
     position: relative;
     margin: 50px;
     
 }
 nav{
-    border: solid blue 1px;
-    background-color: aliceblue;
+    border: solid black 2px;
+    background-color: rgba(240, 248, 255, 0.301);
+    position: relative;
 }
- nav ul{
+img{
+    width : 7%;
+    float: left;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+nav ul{
     list-style-type: none;
     text-transform: uppercase;
-   
+    position : relative;
+    left: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 ul li{
     display: inline-block;
-    margin-right: 30px;
+    margin-right: 20px;
     padding-left: 40px;
     padding-right: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     border: solid black 2px;
-    border-radius: 5px;
-    background-color: bisque;
+    border-radius: 15px;
+    background-color: rgba(255, 228, 196, 0.432);
 }
 
 ul li:hover{
-    background-color: rgb(235, 136, 15);
+    background-color: rgba(255, 0, 0, 0.747) !important;
+    border-bottom: 0px !important;
 }
-
 #content{
-    border : solid rgb(255, 0, 0) 1px;
     position : relative;
     top: 10px;
 }
 
 form{
-    border : solid rgb(255, 0, 0) 1px;
+    border : solid rgb(126, 4, 4) 2px;
     margin-top : 5%;
-    background-color: bisque;
+    background-color: rgba(240, 248, 255, 0.301);
 }
 
 form select,input{
-    width : 250px;
-    height : 50px;
+    width : 350px;
+    height : 100px;
     margin : 50px;
+    border : solid 2px black;
+    border-radius : 25px;
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(255, 228, 196, 0.432);
 }
